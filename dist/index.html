@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İrşat Akdeniz</title>
+    <link href="output.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+
+<body class="bg-gray-700 text-gray-50">
+    <div class="bg-black bg-opacity-20 backdrop-blur-sm hidden fixed inset-0" id="drawerContainer">
+        <div class="bg-gray-600 absolute left-0 top-0 bottom-0 py-4" id="drawer">
+            <ul class="" id="drawerList">
+            </ul>
+        </div>
+    </div>
+    <header class="flex flex-row md:justify-end">
+        <button class="ml-3 mt-3 flex size-10 md:hidden" id="toggleDrawerBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+        </button>
+        <nav class="hidden md:flex flex-row items-center mt-6 mr-20 gap-6 text-gray-300" id="navigation">
+            <template>
+                <a class="text-xl hover:text-white transition-colors" href="">Title</a>
+            </template>
+            <a href="İrşat_Akdeniz_Türkçe.pdf" target="_blank"
+                class="block py-1 px-3 rounded-3xl text-base text-white bg-sky-800 transition-colors hover:bg-sky-700">Download CV</a>
+        </nav>
+    </header>
+    <script>
+        //<li><a href="/" class="block text-2xl py-2 pl-4 pr-7 whitespace-nowrap">About me</a></li>
+        const listMobile = document.getElementById('drawerList')
+        const listDesktop = document.getElementById('navigation')
+        const links = [
+            ['About me', ''],
+            ['Skills', 'skills'],
+            ['Projects', 'projects'],
+            ['Hire me', 'hire-me']
+        ]
+        links.forEach(([title, link]) => {
+            listMobile.innerHTML += `
+                <li>
+                    <a class="block text-2xl py-2 pl-4 pr-7 whitespace-nowrap" href="${link}">${title}</a>
+                </li>
+            `
+            listDesktop.innerHTML += `
+                <a class="text-xl hover:text-white transition-colors" href="${link}">${title}</a>
+            `
+        })
+    </script>
+</body>
+
+</html>
