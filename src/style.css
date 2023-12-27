@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .nav-link {
+        @apply text-xl hover:text-white transition-colors;
+    }
+
+    .drawer-link {
+        @apply block text-2xl py-2 pl-4 pr-7 whitespace-nowrap;
+    }
+}
