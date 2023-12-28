@@ -18,6 +18,28 @@ document.addEventListener('DOMContentLoaded', () => {
             createStar(bg);
         }
     })();
+    // Switch between job titles
+    (() => {
+        const titles = ["Full Stack", "Front End", "Back End"];
+        const title = document.getElementById('changingJobTitle');
+        setInterval(() => {
+            let text = title.innerText;
+            let currentIndex = titles.indexOf(text);
+            const initialLength = text.length;
+            for (let i = 0; i < initialLength; i++) {
+                setTimeout(() => {
+                    text = text.slice(0, -1);
+                    title.innerText = text;
+                }, i * 50);
+            }
+            let newText = titles[(currentIndex + 1) % titles.length || 0];
+            for (let i = 0; i < newText.length; i++) {
+                setTimeout(() => {
+                    title.innerHTML += newText[i]
+                }, (text.length + i) * 50);
+            }
+        }, 5000);
+    })();
 });
 
 async function createStar(bg) {
