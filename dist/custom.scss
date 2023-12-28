@@ -76,3 +76,23 @@
 .star-animated-1 {
 	animation: star-shine-1 3s ease-in-out infinite;
 }
+
+@keyframes blink {
+
+	from,
+	to {
+		color: transparent;
+	}
+
+	50% {
+		color: rgb(255, 255, 255);
+	}
+}
+
+#blinkingCursor {
+	-webkit-animation: 1s blink step-end infinite;
+	-moz-animation: 1s blink step-end infinite;
+	-ms-animation: 1s blink step-end infinite;
+	-o-animation: 1s blink step-end infinite;
+	animation: 1s blink step-end infinite;
+}
