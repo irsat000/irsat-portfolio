@@ -77,6 +77,69 @@
 	animation: star-shine-1 3s ease-in-out infinite;
 }
 
+
+@keyframes slide-out-left {
+	0% {
+		transform: translateX(0);
+		display: block;
+	}
+
+	100% {
+		transform: translateX(-100vw);
+		display: none;
+	}
+}
+
+.star-slide-out-left {
+	animation: slide-out-left 2s ease-in-out forwards;
+}
+
+@keyframes slide-out-right {
+	0% {
+		transform: translateX(0);
+		display: block;
+	}
+
+	100% {
+		transform: translateX(100vw);
+		display: none;
+	}
+}
+
+.star-slide-out-right {
+	animation: slide-out-right 2s ease-in-out forwards;
+}
+
+
+
+@keyframes slide-in-left {
+	0% {
+		transform: translateX(-100vw);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.star-slide-in-left {
+	animation: slide-in-left 2s ease-in-out forwards;
+}
+
+@keyframes slide-in-right {
+	0% {
+		transform: translateX(100vw);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.star-slide-in-right {
+	animation: slide-in-right 2s ease-in-out forwards;
+}
+
 @keyframes blink {
 
 	from,

@@ -4,10 +4,14 @@
 
 @layer components {
     .nav-link {
-        @apply text-xl hover:text-white transition-colors;
+        @apply text-xl hover:text-white transition-colors cursor-pointer;
     }
 
     .drawer-link {
         @apply block text-2xl py-2 pl-4 pr-7 whitespace-nowrap;
+    }
+
+    main>section.active {
+        @apply flex;
     }
 }

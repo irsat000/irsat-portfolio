@@ -2,84 +2,110 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İrşat Akdeniz</title>
-    <link href="output.css" rel="stylesheet">
-    <link href="custom.css" rel="stylesheet">
-    <script src="main.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>İrşat Akdeniz</title>
+	<link href="output.css" rel="stylesheet">
+	<link href="custom.css" rel="stylesheet">
+	<script src="main.js"></script>
 </head>
 
 <body class="bg-gray-700 text-gray-50">
-    <div class="fixed inset-0 z-[-1]" id="skyBackground">
-        <img class="absolute bottom-0 left-0 right-0 w-full z-20 h-1/6 object-cover md:object-contain md:h-auto"
-            src="mountain.png" alt="Mountain" />
-    </div>
-    <div class="z-40 bg-black bg-opacity-20 backdrop-blur-sm hidden fixed inset-0" id="drawerContainer">
-        <div class="bg-gray-600 absolute left-0 top-0 bottom-0 py-4" id="drawer">
-            <ul class="" id="drawerList">
-                <li><a class="drawer-link" href="">About me</a></li>
-                <li><a class="drawer-link" href="skills">Skills</a></li>
-                <li><a class="drawer-link" href="projects">Projects</a></li>
-                <li><a class="drawer-link" href="hire-me">Hire me</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="flex flex-col">
-        <header class="flex flex-row md:justify-end">
-            <button class="ml-3 mt-3 flex size-10 md:hidden" id="toggleDrawerBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                </svg>
-            </button>
-            <nav class="hidden md:flex flex-row items-center mt-6 mr-20 gap-6 text-gray-300" id="navigation">
-                <a href="İrşat_Akdeniz_Türkçe.pdf" target="_blank"
-                    class="block py-1 px-3 rounded-3xl text-base text-white bg-sky-800 transition-colors hover:bg-sky-700">Download
-                    CV</a>
-                <a class="nav-link" href="">About me</a>
-                <a class="nav-link" href="skills">Skills</a>
-                <a class="nav-link" href="projects">Projects</a>
-                <a class="nav-link" href="hire-me">Hire me</a>
-            </nav>
-        </header>
-        <main class="mb-20">
-            <div class="flex flex-col lg:flex-row justify-around gap-y-10 gap-x-5 items-center mt-6 md:mt-20"
-                id="aboutMe">
-                <div class="flex flex-col items-center text-center px-4 lg:text-left lg:items-start lg:w-1/2">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-2 md:mb-4"><span
-                            class="text-purple-400 text-3xl">I'm</span>
-                        Muhammet İrşat Akdeniz</h1>
-                    <h2 class="text-2xl md:text-4xl font-bold mb-4 md:mb-7 text-teal-300"><span
-                            id="changingJobTitle">Full Stack</span><span
-                            class="text-2xl md:text-4xl text-white ml-[2px] inline-block -translate-y-[2px] md:-translate-y-1"
-                            id="blinkingCursor">|</span><br class="sm:hidden"> Web Developer</h2>
-                    <p class="text-xl opacity-75 mb-4 md:mb-7 indent-1">
-                        Hi, I spent a lot of time to get where I am right now. And I loved every second of it! What
-                        started with educational projects grew into real-life projects. I work with HTML, SCSS, TS,
-                        TailwindCSS, React, Node.js, SQL and <a class="text-blue-300 hover:underline"
-                            href="skills">more</a>. I have B2 level English and I never stop learning.
-                    </p>
-                    <div class="flex gap-4">
-                        <a href="İrşat_Akdeniz_Türkçe.pdf" target="_blank"
-                            class="block py-3 px-4 rounded-full text-base text-white border-solid border border-white transition-colors duration-75 hover:bg-sky-700">Download
-                            CV</a>
-                        <a href="hire-me"
-                            class="block py-3 px-4 rounded-full text-base text-white border-solid border border-white transition-colors duration-75 hover:bg-sky-700">Hire
-                            me</a>
-                    </div>
-                </div>
-                <div class="flex shrink-0 px-8 md:px-0">
-                    <div
-                        class="rounded-tl-[200px] rounded-tr-[40px] rounded-bl-3xl rounded-br-3xl border-2 border-white md:border-hidden md:bg-blue-800 md:bg-opacity-30 overflow-hidden w-full md:w-auto md:h-[400px] pt-10">
-                        <img class="size-full md:object-contain" src="examplePortrait.png" alt="My photo">
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-    <script>
-    </script>
+	<div class="fixed inset-0 z-[-1]" id="skyBackground">
+		<img class="absolute bottom-0 left-0 right-0 w-full z-20 h-1/6 object-cover md:object-contain md:h-auto"
+			src="mountain.png" alt="Mountain" />
+	</div>
+	<div class="z-40 bg-black bg-opacity-20 backdrop-blur-sm hidden fixed inset-0" id="drawerContainer">
+		<div class="bg-gray-600 absolute left-0 top-0 bottom-0 py-4" id="drawer">
+			<ul class="" id="drawerList">
+				<li><a class="drawer-link" onclick="switchPage('home')">Home</a></li>
+				<li><a class="drawer-link" onclick="switchPage('skills')">Skills</a></li>
+				<li><a class="drawer-link" onclick="switchPage('projects')">Projects</a></li>
+				<li><a class="drawer-link" onclick="switchPage('hireMe')">Hire me</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="flex flex-col">
+		<header class="flex flex-row md:justify-end">
+			<button class="ml-3 mt-3 flex size-10 md:hidden" id="toggleDrawerBtn">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+					<path fill-rule="evenodd"
+						d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+				</svg>
+			</button>
+			<nav class="hidden md:flex flex-row items-center mt-6 mr-20 gap-6 text-gray-300" id="navigation">
+				<a href="İrşat_Akdeniz_Türkçe.pdf" target="_blank"
+					class="block py-1 px-3 rounded-3xl text-base text-white bg-sky-800 transition-colors hover:bg-sky-700">Download
+					CV</a>
+				<a class="nav-link" onclick="switchPage('home')">Home</a>
+				<a class="nav-link" onclick="switchPage('skills')">Skills</a>
+				<a class="nav-link" onclick="switchPage('projects')">Projects</a>
+				<a class="nav-link" onclick="switchPage('hireMe')">Hire me</a>
+			</nav>
+		</header>
+		<main class="mb-20">
+			<section id="homePage"
+				class="hidden active flex-col lg:flex-row justify-around gap-y-10 gap-x-5 items-center mt-6 md:mt-20">
+				<div class="flex flex-col items-center text-center px-4 lg:text-left lg:items-start lg:w-1/2">
+					<h1 class="text-4xl md:text-5xl font-bold mb-2 md:mb-4"><span class="text-purple-400 text-3xl">I'm</span>
+						Muhammet İrşat Akdeniz</h1>
+					<h2 class="text-2xl md:text-4xl font-bold mb-4 md:mb-7 text-teal-300"><span id="changingJobTitle">Full
+							Stack</span><span
+							class="text-2xl md:text-4xl text-white ml-[2px] inline-block -translate-y-[2px] md:-translate-y-1"
+							id="blinkingCursor">|</span><br class="sm:hidden"> Web Developer</h2>
+					<p class="text-xl opacity-75 mb-4 md:mb-7 indent-1">
+						Hi, I spent a lot of time to get where I am right now. And I loved every second of it! What
+						started with educational projects grew into real-life projects. I work with HTML, SCSS, TS,
+						TailwindCSS, React, Node.js, SQL and <a class="text-blue-300 hover:underline" href="skills">more</a>. I have
+						B2 level English and I never stop learning.
+					</p>
+					<div class="flex gap-4">
+						<a href="İrşat_Akdeniz_Türkçe.pdf" target="_blank"
+							class="flex items-center gap-2 py-3 px-4 rounded-full text-base text-white border-solid border border-white transition-colors duration-75 hover:bg-sky-700">Download
+							CV
+							<span class="size-5">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+									<path
+										d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+									<path
+										d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+								</svg>
+							</span></a>
+						<a href="hire-me"
+							class="flex items-center gap-2 py-3 px-4 rounded-full text-base text-white border-solid border border-white transition-colors duration-75 hover:bg-sky-700">Hire
+							me
+							<span class="size-5">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-hand-index"
+									viewBox="0 0 16 16">
+									<path
+										d="M6.75 1a.75.75 0 0 1 .75.75V8a.5.5 0 0 0 1 0V5.467l.086-.004c.317-.012.637-.008.816.027.134.027.294.096.448.182.077.042.15.147.15.314V8a.5.5 0 1 0 1 0V6.435a4.9 4.9 0 0 1 .106-.01c.316-.024.584-.01.708.04.118.046.3.207.486.43.081.096.15.19.2.259V8.5a.5.5 0 0 0 1 0v-1h.342a1 1 0 0 1 .995 1.1l-.271 2.715a2.5 2.5 0 0 1-.317.991l-1.395 2.442a.5.5 0 0 1-.434.252H6.035a.5.5 0 0 1-.416-.223l-1.433-2.15a1.5 1.5 0 0 1-.243-.666l-.345-3.105a.5.5 0 0 1 .399-.546L5 8.11V9a.5.5 0 0 0 1 0V1.75A.75.75 0 0 1 6.75 1M8.5 4.466V1.75a1.75 1.75 0 1 0-3.5 0v5.34l-1.2.24a1.5 1.5 0 0 0-1.196 1.636l.345 3.106a2.5 2.5 0 0 0 .405 1.11l1.433 2.15A1.5 1.5 0 0 0 6.035 16h6.385a1.5 1.5 0 0 0 1.302-.756l1.395-2.441a3.5 3.5 0 0 0 .444-1.389l.271-2.715a2 2 0 0 0-1.99-2.199h-.581a5.114 5.114 0 0 0-.195-.248c-.191-.229-.51-.568-.88-.716-.364-.146-.846-.132-1.158-.108l-.132.012a1.26 1.26 0 0 0-.56-.642 2.632 2.632 0 0 0-.738-.288c-.31-.062-.739-.058-1.05-.046zm2.094 2.025" />
+								</svg>
+							</span></a>
+					</div>
+				</div>
+				<div class="flex shrink-0 px-8 md:px-0">
+					<div
+						class="shadow-[0_3px_16px_-4px_rgba(192,132,252,0.3)] rounded-tl-[200px] rounded-tr-[40px] rounded-bl-3xl rounded-br-3xl border-2 border-white md:border-hidden md:bg-blue-800 md:bg-opacity-30 overflow-hidden w-full md:w-auto md:h-[400px] pt-10">
+						<img class="size-full md:object-contain" src="examplePortrait.png" alt="My photo">
+					</div>
+				</div>
+			</section>
+			<section id="skillsPage"
+				class="hidden flex-col lg:flex-row justify-around gap-y-10 gap-x-5 items-center mt-6 md:mt-20">
+				asdfadsf
+			</section>
+			<section id="projectsPage"
+				class="hidden flex-col lg:flex-row justify-around gap-y-10 gap-x-5 items-center mt-6 md:mt-20">
+				asdfadsf
+			</section>
+			<section id="hireMePage"
+				class="hidden flex-col lg:flex-row justify-around gap-y-10 gap-x-5 items-center mt-6 md:mt-20">
+				asdfadsf
+			</section>
+		</main>
+	</div>
+	<script>
+	</script>
 </body>
 
 </html>
