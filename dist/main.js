@@ -1,6 +1,8 @@
+const routes = ['home', 'skills', 'projects', 'hireMe'];
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize the page based on the query string
-    switchPage(getPage());
+    switchPage('initial');
     // Toggle the drawer
     document.getElementById('toggleDrawerBtn').addEventListener('click', () => {
         const drawer = document.getElementById('drawerContainer');
@@ -29,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             setTimeout(() => {
                 let newText = titles[(currentIndex + 1) % titles.length || 0];
+                // Make sure to reset for faulty timing caused by various things
+                title.innerHTML = "";
                 for (let i = 0; i < newText.length; i++) {
                     setTimeout(() => {
                         title.innerHTML += newText[i]
@@ -48,7 +52,7 @@ async function createStars(direction) {
     const starsExist = stars.length > 0;
     if (starsExist) {
         Array.from(stars).forEach(star => {
-            star.classList.add(`star-slide-out-${direction === 'right' ? 'left' : 'right'}`);
+            star.classList.add(`slide-out-${direction === 'right' ? 'left' : 'right'}`);
             setTimeout(() => star.remove(), 2000);
         });
     }
@@ -78,9 +82,9 @@ async function createStar(bg, direction, slideIn = false) {
     star.classList.add('bg-star');
     if (slideIn) {
         const _direction = direction === 'right' ? 'right' : 'left';
-        star.classList.add('star-slide-in-' + _direction);
+        star.classList.add('slide-in-' + _direction);
         // Await 2 seconds for star to slide in, and remove the class
-        setTimeout(() => star.classList.remove('star-slide-in-' + _direction), 2000);
+        setTimeout(() => star.classList.remove('slide-in-' + _direction), 2000);
     }
     // Blur half of them
     if (blurry) {
@@ -102,8 +106,18 @@ function random(min, max) {
     return min + Math.random() * (max + 1 - min);
 }
 
-function switchPage(page) {
-    const routes = ['home', 'skills', 'projects', 'hireMe'];
+function switchPage(target) {
+    let page = '';
+    // If initial get page from query string
+    if (target === 'initial') {
+        page = getPage();
+    }
+    // If not initial but the page is the same, then return
+    else if (target === getPage()) {
+        return;
+    } else {
+        page = target;
+    }
     // Get direction of sliding in
     const direction = routes.indexOf(getPage()) <= routes.indexOf(page) ? 'right' : 'left';
     // Animate the page switch
@@ -118,12 +132,29 @@ function switchPage(page) {
     // Hide all pages
     const pages = document.querySelectorAll('main > section');
     pages.forEach(targetPage => {
-        targetPage.classList.remove('active');
+        if (targetPage.classList.contains('active')) {
+            const slideOutClass = `post-slide-out-${direction === 'right' ? 'left' : 'right'}`;
+            targetPage.classList.add(slideOutClass);
+            setTimeout(() => {
+                targetPage.classList.remove('active');
+                targetPage.classList.remove(slideOutClass);
+            }, 1000);
+        }
     });
 
     // Show the selected page
     const selectedPage = document.getElementById(targetPage + 'Page');
     selectedPage.classList.add('active');
+
+    // Check if initial
+    if (target !== 'initial') {
+        // Slide in the selected page
+        const slideInClass = `post-slide-in-${direction === 'right' ? 'right' : 'left'}`;
+        selectedPage.classList.add(slideInClass);
+        setTimeout(() => {
+            selectedPage.classList.remove(slideInClass);
+        }, 1000);
+    }
 }
 
 function delay(ms) { return new Promise(res => setTimeout(res, ms)) };

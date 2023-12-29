@@ -11,6 +11,10 @@
         @apply block text-2xl py-2 pl-4 pr-7 whitespace-nowrap;
     }
 
+    main>section {
+        @apply hidden flex-shrink-0 flex-grow-0 w-full flex-col lg:flex-row justify-around gap-y-10 gap-x-5 items-center mt-6 md:mt-20;
+    }
+
     main>section.active {
         @apply flex;
     }
