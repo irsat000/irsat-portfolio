@@ -44,13 +44,13 @@
         @apply flex flex-col gap-3 items-start grow;
     }
     .project-description h3{
-        @apply text-2xl lg:text-3xl;
+        @apply text-2xl lg:text-3xl hover:underline;
     }
     .project-description p{
         @apply text-base opacity-70 xl:text-lg;
     }
-    .project-description a{
-        @apply text-lg lg:text-xl flex items-center gap-2 py-1 px-4 rounded-full text-white border-solid border border-white hover:bg-sky-700;
+    .project-description > a{
+        @apply text-lg lg:text-xl flex items-center gap-2 py-1 px-4 rounded-full border border-solid border-white hover:bg-sky-700;
     }
     .project-wrapper .img-wrap{
         @apply shrink-0

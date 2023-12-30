@@ -162,18 +162,21 @@ function switchPage(target) {
         page = target;
     }
 
-    // Change page title
-    const headerPageName = document.getElementById('currentPage');
-    headerPageName.innerText = routesMap[page];
+    const routeKeys = Object.keys(routesMap);
 
     // Get direction of sliding in
-    const direction = Object.keys(routesMap).indexOf(getPage()) <= Object.keys(routesMap).indexOf(page) ? 'right' : 'left';
+    const direction = routeKeys.indexOf(getPage()) <= routeKeys.indexOf(page) ? 'right' : 'left';
     // Animate the page switch
     if (window.innerWidth >= 768) {
         createStars(direction);
     }
     // Get page or default 'home'
     const targetPage = page ? page : 'home';
+
+    // Get next page and listen click event
+    const nextPageButton = document.getElementById('nextPage');
+    const nextIndex = (routeKeys.indexOf(targetPage) + 1) % routeKeys.length;
+    nextPageButton.innerText = Object.values(routesMap)[nextIndex];
 
     // Update the query string
     const newUrl = `${window.location.pathname}${targetPage !== 'home' ? `?page=${targetPage}` : ''}`;
@@ -205,6 +208,25 @@ function switchPage(target) {
             selectedPage.classList.remove(slideInClass);
         }, 1000);
     }
+}
+
+// Go to the next page from the route keys, if it's the end, return to index 0
+let isCooldownActive = false;
+function nextPage() {
+    if (isCooldownActive) {
+        // Do nothing if the cooldown is still active
+        return;
+    }
+    // Set the cooldown flag to true
+    isCooldownActive = true;
+    // Get the next index and the key, then run switchPage
+    const routeKeys = Object.keys(routesMap);
+    const nextIndex = (routeKeys.indexOf(getPage()) + 1) % routeKeys.length;
+    switchPage(routeKeys[nextIndex]);
+    // Reset cooldown after 2 seconds
+    setTimeout(() => {
+        isCooldownActive = false;
+    }, 1000);
 }
 
 function delay(ms) { return new Promise(res => setTimeout(res, ms)) };

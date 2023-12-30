@@ -33,7 +33,16 @@
 						d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
 				</svg>
 			</button>
-			<h2 class="mr-4 mt-3 text-2xl md:hidden" id="currentPage">Home</h2>
+			<h2 class="mr-4 mt-3 py-1 pl-4 pr-3 rounded-full border border-solid border-white text-base flex gap-2 items-center md:hidden"
+				onclick="nextPage()">
+				<span id="nextPage">Home</span>
+				<div class="size-4"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-chevron-right" viewBox="0 0 16 16">
+						<path fill-rule="evenodd"
+							d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+					</svg>
+				</div>
+			</h2>
 			<nav class="hidden md:flex flex-row items-center mt-6 mr-20 gap-6 text-gray-300" id="navigation">
 				<a href="İrşat_Akdeniz_Türkçe.pdf" target="_blank"
 					class="block py-1 px-3 rounded-3xl text-base text-white bg-sky-800 transition-colors hover:bg-sky-700">Download
@@ -64,7 +73,7 @@
 					</p>
 					<div class="flex gap-4">
 						<a href="İrşat_Akdeniz_Türkçe.pdf" target="_blank"
-							class="flex items-center gap-2 py-3 px-4 rounded-full text-base text-white border-solid border border-white transition-colors duration-75 hover:bg-sky-700">Download
+							class="flex items-center gap-2 py-3 px-4 rounded-full text-base border-solid border border-white transition-colors duration-75 hover:bg-sky-700">Download
 							CV
 							<span class="size-5">
 								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-download"
@@ -76,7 +85,7 @@
 								</svg>
 							</span></a>
 						<a href="hire-me"
-							class="flex items-center gap-2 py-3 px-4 rounded-full text-base text-white border-solid border border-white transition-colors duration-75 hover:bg-sky-700">Hire
+							class="flex items-center gap-2 py-3 px-4 rounded-full text-base border-solid border border-white transition-colors duration-75 hover:bg-sky-700">Hire
 							me
 							<span class="size-5">
 								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-hand-index"
@@ -119,12 +128,12 @@
 				<div class="w-full flex flex-col gap-20">
 					<div class="project-wrapper">
 						<div class="project-description">
-							<h3>ZanaatHan.com</h3>
+							<h3><a href="https://zanaathan.com" target="_blank">zanaathan.com</a></h3>
 							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
 								omnis sequi officia,
 								obcaecati odit nisi, ut aut accusamus cum, eaque debitis. Minus cupiditate, recusandae
 								molestiae aliquid fugiat repudiandae quaerat eaque!</p>
-							<a href="https:zanaathan.com" target="_blank">Visit
+							<a href="https://zanaathan.com" target="_blank">Visit
 								<span class="size-5">
 									<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-link-45deg"
 										viewBox="0 0 16 16">
@@ -141,11 +150,11 @@
 					</div>
 					<div class="project-wrapper">
 						<div class="project-description">
-							<h3>sitelerguzellik.com</h3>
+							<h3><a href="https://sitelerguzellik.com" target="_blank">sitelerguzellik.com</a></h3>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci magni repudiandae,
 								debitis optio ipsum mollitia quas quos quo expedita nostrum ratione sint, aut harum
 								tempore cum dolores laborum distinctio provident.</p>
-							<a href="https:sitelerguzellik.com" target="_blank">Visit
+							<a href="https://sitelerguzellik.com" target="_blank">Visit
 								<span class="size-5">
 									<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-link-45deg"
 										viewBox="0 0 16 16">
@@ -162,7 +171,8 @@
 					</div>
 					<div class="project-wrapper">
 						<div class="project-description">
-							<h3>CAI Tools (extension)</h3>
+							<h3><a href="https://chromewebstore.google.com/detail/cai-tools/nbhhncgkhacdaaccjbbadkpdiljedlje"
+									target="_blank">CAI Tools (extension)</a></h3>
 							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore aperiam asperiores
 								veniam iure esse ratione exercitationem sint, id est culpa. Nulla, recusandae! Incidunt
 								nulla error eaque deleniti repellendus, eveniet temporibus.</p>
@@ -184,8 +194,8 @@
 					</div>
 				</div>
 			</section>
-			<section id="hireMePage" class="bg-green-600">
-				asdfadsf
+			<section id="hireMePage" class="">
+				<h3 class="text-2xl text-center w-full">Hire me</h3>
 			</section>
 		</main>
 	</div>
