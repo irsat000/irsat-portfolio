@@ -1,4 +1,10 @@
-const routes = ['home', 'skills', 'projects', 'hireMe'];
+
+const routesMap = {
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "hireMe": "Hire me"
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize the page based on the query string
@@ -155,10 +161,17 @@ function switchPage(target) {
     } else {
         page = target;
     }
+
+    // Change page title
+    const headerPageName = document.getElementById('currentPage');
+    headerPageName.innerText = routesMap[page];
+
     // Get direction of sliding in
-    const direction = routes.indexOf(getPage()) <= routes.indexOf(page) ? 'right' : 'left';
+    const direction = Object.keys(routesMap).indexOf(getPage()) <= Object.keys(routesMap).indexOf(page) ? 'right' : 'left';
     // Animate the page switch
-    createStars(direction);
+    if (window.innerWidth >= 768) {
+        createStars(direction);
+    }
     // Get page or default 'home'
     const targetPage = page ? page : 'home';
 
