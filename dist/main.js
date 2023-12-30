@@ -41,7 +41,42 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000);
         }, 5000);
     })();
+
+    // Fetch skills
+    fetch("/dist/mySkills.json")
+        .then(res => res.json())
+        .then(data => {
+            const frontEndSkills = document.getElementById("frontEndSkills");
+            const backEndSkills = document.getElementById("backEndSkills");
+            const otherSkills = document.getElementById("otherSkills");
+            const pastSkills = document.getElementById("pastSkills");
+            data.frontEndSkills.forEach(s => addSkill(s.name, s.level, frontEndSkills));
+            data.backEndSkills.forEach(s => addSkill(s.name, s.level, backEndSkills));
+            data.otherSkills.forEach(s => addSkill(s.name, s.level, otherSkills));
+            data.pastSkills.forEach(s => addSkill(s.name, s.level, pastSkills));
+        })
+        .catch(e => console.log(e));
 });
+
+// Adds skill to the given skill-set
+function addSkill(name, level, parent) {
+    // Level can be undefined
+    let levelWrapper = '';
+    if (level) {
+        for (let i = 0; i < 5; i++) {
+            levelWrapper += `<li ${level > i ? 'class="active"' : ''}></li>`;
+        }
+    }
+    let skill = `
+        <li>
+            <span>${name}</span>
+            <ul class="level">
+                ${level ? levelWrapper : ''}
+            </ul>
+        </li>
+    `;
+    parent.innerHTML += skill;
+}
 
 // Create stars for the background
 async function createStars(direction) {

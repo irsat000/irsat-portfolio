@@ -1,5 +1,7 @@
 #skyBackground {
   background: #060010;
+  background: -moz-linear-gradient(top, #060010 0%, #060010 6%, #090016 11%, #070016 20%, #0a0121 48%, #0a0127 55%, #0a0129 57%, #0c012b 62%, #0e0131 68%, #0d012f 69%, #18023c 78%, #19023e 79%, #19023e 79%, #1c0242 81%, #22034b 85%, #2e045a 92%, #2f045e 96%, #340464 98%, #370569 100%);
+  background: -webkit-linear-gradient(top, #060010 0%, #060010 6%, #090016 11%, #070016 20%, #0a0121 48%, #0a0127 55%, #0a0129 57%, #0c012b 62%, #0e0131 68%, #0d012f 69%, #18023c 78%, #19023e 79%, #19023e 79%, #1c0242 81%, #22034b 85%, #2e045a 92%, #2f045e 96%, #340464 98%, #370569 100%);
   background: linear-gradient(to bottom, #060010 0%, #060010 6%, #090016 11%, #070016 20%, #0a0121 48%, #0a0127 55%, #0a0129 57%, #0c012b 62%, #0e0131 68%, #0d012f 69%, #18023c 78%, #19023e 79%, #19023e 79%, #1c0242 81%, #22034b 85%, #2e045a 92%, #2f045e 96%, #340464 98%, #370569 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060010", 			endColorstr="#370569", 			GradientType=0);
   transform: scale(1);
@@ -23,10 +25,6 @@
     display: none;
   }
 }
-.slide-out-left {
-  animation: slide-out-left 2s ease-in-out forwards;
-}
-
 @keyframes slide-out-right {
   0% {
     transform: translateX(0);
@@ -36,10 +34,6 @@
     display: none;
   }
 }
-.slide-out-right {
-  animation: slide-out-right 2s ease-in-out forwards;
-}
-
 @keyframes slide-in-left {
   0% {
     transform: translateX(-100vw);
@@ -48,10 +42,6 @@
     transform: translateX(0);
   }
 }
-.slide-in-left {
-  animation: slide-in-left 2s ease-in-out forwards;
-}
-
 @keyframes slide-in-right {
   0% {
     transform: translateX(100vw);
@@ -60,6 +50,18 @@
     transform: translateX(0);
   }
 }
+.slide-out-left {
+  animation: slide-out-left 2s ease-in-out forwards;
+}
+
+.slide-out-right {
+  animation: slide-out-right 2s ease-in-out forwards;
+}
+
+.slide-in-left {
+  animation: slide-in-left 2s ease-in-out forwards;
+}
+
 .slide-in-right {
   animation: slide-in-right 2s ease-in-out forwards;
 }
@@ -73,6 +75,10 @@
   }
 }
 #blinkingCursor {
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
   animation: 1s blink step-end infinite;
 }
 
@@ -124,4 +130,6 @@
 
 .post-slide-in-right {
   animation: post-slide-in-right 1s ease-out forwards;
-}/*# sourceMappingURL=custom.css.map */
+}
+
+/*# sourceMappingURL=custom.css.map */

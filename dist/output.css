@@ -599,6 +599,71 @@ main>section.active {
   display: flex;
 }
 
+#skillsPage .skill-container {
+  flex-basis: 100%;
+  border-radius: 1rem;
+  background-color: rgb(88 28 135 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.1;
+  padding: 1rem;
+  --tw-shadow: 0 4px 10px 0px rgba(106,143,255,0.3);
+  --tw-shadow-colored: 0 4px 10px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 768px) {
+  #skillsPage .skill-container {
+    flex-basis: 48%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #skillsPage .skill-container {
+    flex-basis: 30%;
+  }
+}
+
+#skillsPage .skill-container>h2 {
+  margin-bottom: 1rem;
+  width: 100%;
+  border-bottom-width: 1px;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.4;
+  padding-bottom: 0.5rem;
+  padding-left: 0.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+#skillsPage .skill-set li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+#skillsPage .skill-set .level {
+  display: flex;
+  gap: 0.25rem;
+}
+
+#skillsPage .skill-set .level li {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.2;
+  padding: 0px;
+}
+
+#skillsPage .skill-set .level li.active {
+  --tw-bg-opacity: 1;
+}
+
 .fixed {
   position: fixed;
 }
@@ -727,12 +792,20 @@ main>section.active {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-start {
   align-items: flex-start;
 }
 
 .items-center {
   align-items: center;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .gap-2 {
@@ -745,6 +818,10 @@ main>section.active {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-y-9 {
+  row-gap: 2.25rem;
 }
 
 .overflow-hidden {
@@ -816,11 +893,6 @@ main>section.active {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
 .bg-sky-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(7 89 133 / var(--tw-bg-opacity));
@@ -848,6 +920,11 @@ main>section.active {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.px-\[5\%\] {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .py-1 {
@@ -1024,6 +1101,11 @@ main>section.active {
     justify-content: flex-end;
   }
 
+  .md\:gap-x-\[4\%\] {
+    -moz-column-gap: 4%;
+         column-gap: 4%;
+  }
+
   .md\:border-hidden {
     border-style: hidden;
   }
@@ -1065,6 +1147,11 @@ main>section.active {
 
   .lg\:items-start {
     align-items: flex-start;
+  }
+
+  .lg\:gap-x-\[3\.3\%\] {
+    -moz-column-gap: 3.3%;
+         column-gap: 3.3%;
   }
 
   .lg\:text-left {

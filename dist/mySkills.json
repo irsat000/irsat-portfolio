@@ -1,0 +1,96 @@
+{
+    "frontEndSkills": [
+        {
+            "name": "Javascript",
+            "level": 5
+        },
+        {
+            "name": "Typescript",
+            "level": 5
+        },
+        {
+            "name": "HTML",
+            "level": 5
+        },
+        {
+            "name": "CSS / SCSS",
+            "level": 5
+        },
+        {
+            "name": "React",
+            "level": 4
+        },
+        {
+            "name": "Next JS",
+            "level": 3
+        },
+        {
+            "name": "Tailwind CSS",
+            "level": 3
+        }
+    ],
+    "backEndSkills": [
+        {
+            "name": "Node.js",
+            "level": 5
+        },
+        {
+            "name": "Express.js",
+            "level": 5
+        },
+        {
+            "name": "RESTful API",
+            "level": 5
+        },
+        {
+            "name": "MySQL / MSSQL",
+            "level": 4
+        },
+        {
+            "name": "C#",
+            "level": 4
+        },
+        {
+            "name": ".NET",
+            "level": 4
+        },
+        {
+            "name": "Entity Framework",
+            "level": 4
+        }
+    ],
+    "otherSkills": [
+        {
+            "name": "Photoshop"
+        },
+        {
+            "name": ""
+        }
+    ],
+    "pastSkills": [
+        {
+            "name": "Python"
+        },
+        {
+            "name": "ADO.NET"
+        },
+        {
+            "name": "Dart / Flutter"
+        },
+        {
+            "name": "VB.NET"
+        },
+        {
+            "name": "Delphi"
+        },
+        {
+            "name": "Django"
+        },
+        {
+            "name": "jQuery"
+        },
+        {
+            "name": ".NET Minimal Api"
+        }
+    ]
+}
