@@ -38,22 +38,25 @@
     }
 
     .project-wrapper {
-        @apply grid gap-y-4 gap-x-14 items-center grid-cols-1 md:grid-cols-2;
+        @apply flex gap-y-4 gap-x-14 items-center flex-col md:flex-row;
     }
     .project-description{
-        @apply flex flex-col gap-3 items-start;
+        @apply flex flex-col gap-3 items-start grow;
     }
     .project-description h3{
-        @apply text-2xl lg:text-5xl;
+        @apply text-2xl lg:text-3xl;
     }
     .project-description p{
-        @apply text-base opacity-70 xl:text-2xl;
+        @apply text-base opacity-70 xl:text-lg;
     }
     .project-description a{
-        @apply text-lg lg:text-3xl flex items-center gap-2 py-1 px-4 rounded-full text-white border-solid border border-white hover:bg-sky-700;
+        @apply text-lg lg:text-xl flex items-center gap-2 py-1 px-4 rounded-full text-white border-solid border border-white hover:bg-sky-700;
+    }
+    .project-wrapper .img-wrap{
+        @apply shrink-0
     }
     .project-wrapper img{
-        @apply w-full h-full object-contain rounded-xl max-h-96;
+        @apply object-contain rounded-xl w-full max-w-96 md:w-96;
     }
 
 }

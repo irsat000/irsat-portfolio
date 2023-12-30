@@ -654,8 +654,8 @@ main>section.active {
 }
 
 .project-wrapper {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
   align-items: center;
   row-gap: 1rem;
   -moz-column-gap: 3.5rem;
@@ -664,12 +664,13 @@ main>section.active {
 
 @media (min-width: 768px) {
   .project-wrapper {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    flex-direction: row;
   }
 }
 
 .project-description {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.75rem;
@@ -682,8 +683,8 @@ main>section.active {
 
 @media (min-width: 1024px) {
   .project-description h3 {
-    font-size: 3rem;
-    line-height: 1;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
@@ -695,8 +696,8 @@ main>section.active {
 
 @media (min-width: 1280px) {
   .project-description p {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -726,18 +727,27 @@ main>section.active {
 
 @media (min-width: 1024px) {
   .project-description a {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
+.project-wrapper .img-wrap {
+  flex-shrink: 0;
+}
+
 .project-wrapper img {
-  height: 100%;
-  max-height: 24rem;
   width: 100%;
+  max-width: 24rem;
   border-radius: 0.75rem;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .project-wrapper img {
+    width: 24rem;
+  }
 }
 
 .fixed {
@@ -900,28 +910,16 @@ main>section.active {
   gap: 0.5rem;
 }
 
+.gap-20 {
+  gap: 5rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
 
 .gap-6 {
   gap: 1.5rem;
-}
-
-.gap-8 {
-  gap: 2rem;
-}
-
-.gap-12 {
-  gap: 3rem;
-}
-
-.gap-14 {
-  gap: 3.5rem;
-}
-
-.gap-20 {
-  gap: 5rem;
 }
 
 .gap-x-5 {
