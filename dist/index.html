@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="min-h-full">
 
 <head>
 	<meta charset="UTF-8">
@@ -10,10 +10,10 @@
 	<script src="main.js"></script>
 </head>
 
-<body class="bg-gray-700 text-gray-50">
+<body class="text-gray-50">
 	<div class="fixed inset-0 z-[-1]" id="skyBackground">
-		<img class="absolute bottom-0 left-0 right-0 w-full z-20 h-1/6 object-cover md:object-contain md:h-auto"
-			src="mountain.png" alt="Mountain" />
+		<img class="hidden md:block absolute bottom-0 left-0 right-0 w-full z-20 h-1/6 object-cover md:object-contain md:h-auto"
+			src="mountain.webp" alt="Mountain" />
 	</div>
 	<div class="z-40 bg-black bg-opacity-20 backdrop-blur-sm hidden fixed inset-0" id="drawerContainer">
 		<div class="bg-gray-600 absolute left-0 top-0 bottom-0 py-4" id="drawer">
@@ -94,7 +94,7 @@
 				</div>
 			</section>
 			<section id="skillsPage" class="">
-				<div class="mb-20 flex flex-wrap justify-around w-full md:gap-x-[4%] lg:gap-x-[3.3%] gap-y-9 px-[5%]">
+				<div class="mb-20 flex flex-wrap justify-around w-full md:gap-x-[4%] xl:gap-x-[3.3%] gap-y-9 px-[5%]">
 					<div class="skill-container">
 						<h2>Front End / UI Development</h2>
 						<ul class="skill-set" id="frontEndSkills"></ul>
@@ -104,7 +104,7 @@
 						<ul class="skill-set" id="backEndSkills"></ul>
 					</div>
 					<div class="skill-container">
-						<h2>Worked with</h2>
+						<h2>Past skills</h2>
 						<ul class="skill-set" id="pastSkills"></ul>
 					</div>
 					<div class="skill-container">

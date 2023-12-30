@@ -20,7 +20,7 @@
     }
 
     #skillsPage .skill-container {
-        @apply basis-full md:basis-[48%] lg:basis-[30%] bg-purple-900 shadow-[0_4px_10px_0px_rgba(106,143,255,0.3)] bg-opacity-10 rounded-2xl p-4;
+        @apply basis-full md:basis-[48%] xl:basis-[30%] bg-purple-900 shadow-[0_4px_10px_0px_rgba(106,143,255,0.3)] bg-opacity-10 rounded-2xl p-4;
     }
 
     #skillsPage .skill-container>h2 {

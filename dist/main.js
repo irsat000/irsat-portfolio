@@ -92,7 +92,9 @@ async function createStars(direction) {
         });
     }
 
-    for (let i = 0; i < 100; i++) {
+    const starCount = window.innerWidth >= 768 ? 100 : 20;
+
+    for (let i = 0; i < starCount; i++) {
         createStar(bg, direction, starsExist);
     }
 }

@@ -64,7 +64,16 @@
             "name": "Photoshop"
         },
         {
-            "name": ""
+            "name": "Turkish",
+            "level": 5
+        },
+        {
+            "name": "English (Read, Write, Listen)",
+            "level": 4
+        },
+        {
+            "name": "English (Speech)",
+            "level": 3
         }
     ],
     "pastSkills": [

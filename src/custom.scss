@@ -1,4 +1,4 @@
-#skyBackground {
+body {
 	background: #060010;
 	background: -moz-linear-gradient(top,
 			#060010 0%,
@@ -63,8 +63,6 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060010",
 			endColorstr="#370569",
 			GradientType=0);
-
-	transform: scale(1);
 }
 
 @keyframes star-shine-1 {
