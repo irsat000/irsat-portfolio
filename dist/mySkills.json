@@ -32,15 +32,15 @@
     "backEndSkills": [
         {
             "name": "Node.js",
-            "level": 5
+            "level": 4
         },
         {
             "name": "Express.js",
-            "level": 5
+            "level": 4
         },
         {
             "name": "RESTful API",
-            "level": 5
+            "level": 4
         },
         {
             "name": "MySQL / MSSQL",

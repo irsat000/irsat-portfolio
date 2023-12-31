@@ -49,6 +49,12 @@
     .project-description p{
         @apply text-base opacity-70 xl:text-lg;
     }
+    .project-description .tech-used{
+        @apply flex gap-2 flex-wrap mb-1;
+    }
+    .project-description .tech-used span{
+        @apply px-2 py-[2px] rounded-sm bg-emerald-600 text-xs;
+    }
     .project-description > a{
         @apply text-lg lg:text-xl flex items-center gap-2 py-1 px-4 rounded-full border border-solid border-white hover:bg-sky-700;
     }

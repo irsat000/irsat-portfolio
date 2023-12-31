@@ -3,7 +3,7 @@ const routesMap = {
     "home": "Home",
     "skills": "Skills",
     "projects": "Projects",
-    "hireMe": "Hire me"
+    "contact": "Contact"
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -98,7 +98,7 @@ async function createStars(direction) {
         });
     }
 
-    const starCount = window.innerWidth >= 768 ? 100 : 20;
+    const starCount = window.innerWidth >= 768 ? 50 : 10;
 
     for (let i = 0; i < starCount; i++) {
         createStar(bg, direction, starsExist);
