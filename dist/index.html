@@ -54,7 +54,7 @@
 			</nav>
 		</header>
 		<main class="overflow-x-hidden flex items-start w-full">
-			<section id="homePage" class="flex-col lg:flex-row justify-around gap-y-10 gap-x-5 items-center">
+			<section id="homePage" class="flex-col lg:flex-row justify-around gap-y-10 gap-x-5 items-center md:pt-8">
 				<div class="flex flex-col items-center text-center px-4 lg:text-left lg:items-start lg:w-1/2">
 					<h1 class="text-4xl md:text-5xl font-bold mb-2 md:mb-4"><span
 							class="text-purple-400 text-3xl">I'm</span>
@@ -98,28 +98,28 @@
 				</div>
 				<div class="flex shrink-0 px-8 md:px-0">
 					<div
-						class="shadow-[0_3px_16px_-4px_rgba(192,132,252,0.3)] rounded-tl-[200px] rounded-tr-[40px] rounded-bl-3xl rounded-br-3xl border-2 border-white md:border-hidden md:bg-blue-800 md:bg-opacity-30 overflow-hidden w-full md:w-auto md:h-[400px] pt-10">
-						<img class="size-full md:object-contain" src="examplePortrait.png" alt="My photo">
+						class="shadow-[0_3px_16px_-4px_rgba(192,132,252,0.3)] rounded-full border-2 border-white md:backdrop-blur-sm md:bg-opacity-30 overflow-hidden w-full sm:w-auto sm:h-[300px] md:h-[400px] pt-6">
+						<img class="size-full object-contain" src="examplePortrait.png" alt="My photo">
 					</div>
 				</div>
 			</section>
-			<section id="skillsPage" class="flex-col lg:flex-row justify-around gap-y-10 gap-x-5 items-center">
-				<div class="flex flex-wrap justify-around w-full md:gap-x-[4%] xl:gap-x-[3.3%] gap-y-9 px-[5%]">
-					<div class="skill-container">
-						<h2>Front End / UI Development</h2>
-						<ul class="skill-set" id="frontEndSkills"></ul>
+			<section id="skillsPage" class="flex-col px-[4%]">
+				<div class="flex flex-col gap-y-6">
+					<div class="flex flex-col gap-y-6 justify-center sm:flex-row sm:gap-x-[4%]">
+						<div class="skill-container">
+							<h2>UI Development</h2>
+							<ul class="skill-set" id="frontEndSkills"></ul>
+						</div>
+						<div class="skill-container">
+							<h2>Server Side</h2>
+							<ul class="skill-set" id="backEndSkills"></ul>
+						</div>
 					</div>
-					<div class="skill-container">
-						<h2>Back End / Server Side</h2>
-						<ul class="skill-set" id="backEndSkills"></ul>
-					</div>
-					<div class="skill-container">
-						<h2>Past skills</h2>
-						<ul class="skill-set" id="pastSkills"></ul>
-					</div>
-					<div class="skill-container">
-						<h2>Others</h2>
-						<ul class="skill-set" id="otherSkills"></ul>
+					<div class="flex justify-center">
+						<div class="skill-container-large">
+							<h2>Worked with before</h2>
+							<ul class="skill-set" id="pastSkills"></ul>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -150,7 +150,7 @@
 								</span></a>
 						</div>
 						<div class="img-wrap">
-							<img src="/dist/myProjects/zanaathan.jpeg" alt="ZanaatHan.com">
+							<img src="../src/myProjects/zanaathan.jpeg" alt="ZanaatHan.com">
 						</div>
 					</div>
 					<div class="project-wrapper">
@@ -176,7 +176,7 @@
 								</span></a>
 						</div>
 						<div class="img-wrap">
-							<img src="/dist/myProjects/sitelerguzellik.PNG" alt="sitelerguzellik.com">
+							<img src="../src/myProjects/sitelerguzellik.PNG" alt="sitelerguzellik.com">
 						</div>
 					</div>
 					<div class="project-wrapper">
@@ -204,7 +204,7 @@
 								</span></a>
 						</div>
 						<div class="img-wrap">
-							<img src="/dist/myProjects/caitools.PNG" alt="CAI Tools">
+							<img src="../src/myProjects/caitools.PNG" alt="CAI Tools">
 						</div>
 					</div>
 				</div>

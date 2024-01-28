@@ -2,53 +2,56 @@
     "frontEndSkills": [
         {
             "name": "Javascript",
-            "level": 5
+            "icon": "js.png"
         },
         {
             "name": "Typescript",
-            "level": 5
+            "icon": "ts.png"
         },
         {
             "name": "HTML",
-            "level": 5
+            "icon": "html.png"
         },
         {
             "name": "CSS / SCSS",
-            "level": 5
+            "icon": "css.png"
         },
         {
             "name": "React",
-            "level": 4
+            "icon": "react.png"
         },
         {
             "name": "Next JS",
-            "level": 2
+            "icon": "nextjs.png"
         },
         {
-            "name": "Tailwind CSS"
+            "name": "Tailwind CSS",
+            "icon": "tailwindcss.png"
         }
     ],
     "backEndSkills": [
         {
             "name": "Node.js",
-            "level": 4
+            "icon": "nodejs.png"
         },
         {
-            "name": "Express.js",
-            "level": 4
+            "name": "Express.js"
         },
         {
-            "name": "MySQL / MSSQL",
-            "level": 4
+            "name": "MySQL",
+            "icon": "mysql.png"
         },
         {
-            "name": "RESTful API"
+            "name": "MSSQL",
+            "icon": "mssql.png"
         },
         {
-            "name": "C#"
+            "name": "C#",
+            "icon": "csharp.png"
         },
         {
-            "name": ".NET"
+            "name": ".NET 3.1/6/7",
+            "icon": "netcore.png"
         },
         {
             "name": "Entity Framework"
@@ -78,24 +81,6 @@
         },
         {
             "name": ".NET Minimal Api"
-        }
-    ],
-    "otherSkills": [
-        {
-            "name": "Problem solving",
-            "level": 5
-        },
-        {
-            "name": "Research",
-            "level": 6
-        },
-        {
-            "name": "English (Read, Write, Listen)",
-            "level": 5
-        },
-        {
-            "name": "English (Speech)",
-            "level": 3
         }
     ]
 }

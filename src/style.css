@@ -14,54 +14,78 @@
     main>section {
         @apply hidden flex-shrink-0 flex-grow-0 w-full mb-20 mt-6 md:mt-20;
     }
+
     main>section.active {
         @apply flex;
     }
 
+    
+
     #skillsPage .skill-container {
-        @apply basis-full md:basis-[48%] xl:basis-[30%] bg-purple-900 shadow-[0_4px_10px_0px_rgba(106,143,255,0.3)] bg-opacity-10 rounded-2xl p-4;
+        @apply p-4 md:min-w-80;
     }
-    #skillsPage .skill-container>h2 {
+
+    #skillsPage .skill-container-large {
+        @apply p-4 w-full max-w-screen-sm;
+    }
+
+    #skillsPage h2 {
         @apply text-2xl mb-4 w-full pb-2 pl-1 border-b border-white border-opacity-40;
     }
+
     #skillsPage .skill-set li {
         @apply flex py-1 px-3 text-base md:text-xl justify-between items-center;
     }
-    #skillsPage .skill-set .level {
-        @apply flex gap-1;
+
+    #skillsPage .skill-set li span>span {
+        @apply text-sm md:text-base;
     }
-    #skillsPage .skill-set .level li {
-        @apply p-0 size-3 rounded-full bg-opacity-20 bg-sky-400;
+
+    #skillsPage .skill-set li img {
+        @apply h-5 max-w-6 object-contain rounded-md md:h-6;
     }
-    #skillsPage .skill-set .level li.active {
-        @apply bg-opacity-100;
+
+
+    #skillsPage .skill-container-large .skill-set {
+        @apply flex flex-row flex-wrap gap-x-3 gap-y-4 justify-center;
     }
+
+
+
 
     .project-wrapper {
         @apply flex gap-y-4 gap-x-14 items-center flex-col md:flex-row;
     }
-    .project-description{
+
+    .project-description {
         @apply flex flex-col gap-3 items-start grow;
     }
-    .project-description h3{
+
+    .project-description h3 {
         @apply text-2xl lg:text-3xl hover:underline;
     }
-    .project-description p{
+
+    .project-description p {
         @apply text-base opacity-70 xl:text-lg;
     }
-    .project-description .tech-used{
+
+    .project-description .tech-used {
         @apply flex gap-2 flex-wrap mb-1;
     }
-    .project-description .tech-used span{
+
+    .project-description .tech-used span {
         @apply px-2 py-[2px] rounded-sm bg-emerald-600 text-xs;
     }
-    .project-description > a{
+
+    .project-description>a {
         @apply text-lg lg:text-xl flex items-center gap-2 py-1 px-4 rounded-full border border-solid border-white hover:bg-sky-700;
     }
-    .project-wrapper .img-wrap{
+
+    .project-wrapper .img-wrap {
         @apply shrink-0
     }
-    .project-wrapper img{
+
+    .project-wrapper img {
         @apply object-contain rounded-xl w-full max-w-96 md:w-96;
     }
 

@@ -54,99 +54,24 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             const frontEndSkills = document.getElementById("frontEndSkills");
             const backEndSkills = document.getElementById("backEndSkills");
-            const otherSkills = document.getElementById("otherSkills");
             const pastSkills = document.getElementById("pastSkills");
-            data.frontEndSkills.forEach(s => addSkill(s.name, s.level, frontEndSkills));
-            data.backEndSkills.forEach(s => addSkill(s.name, s.level, backEndSkills));
-            data.otherSkills.forEach(s => addSkill(s.name, s.level, otherSkills));
-            data.pastSkills.forEach(s => addSkill(s.name, s.level, pastSkills));
+            data.frontEndSkills.forEach((s, i) => addSkill(s, i, frontEndSkills));
+            data.backEndSkills.forEach((s, i) => addSkill(s, i, backEndSkills));
+            data.pastSkills.forEach(s => addSkill(s, -1, pastSkills));
         })
         .catch(e => console.log(e));
 });
 
 // Adds skill to the given skill-set
-function addSkill(name, level, parent) {
-    // Level can be undefined
-    let levelWrapper = '';
-    if (level) {
-        for (let i = 0; i < 6; i++) {
-            levelWrapper += `<li ${level > i ? 'class="active"' : ''}></li>`;
-        }
-    }
-    let skill = `
+function addSkill(s, i, parent) {
+    let icon = s.icon ? `<img src="../src/skill_icons/${s.icon}" />` : '';
+    let el = `
         <li>
-            <span>${name}</span>
-            <ul class="level">
-                ${level ? levelWrapper : ''}
-            </ul>
+            <span>${i !== -1 ? `<span>${++i}.</span> ` : ''}${s.name}</span>
+            ${icon}
         </li>
     `;
-    parent.innerHTML += skill;
-}
-
-// Create stars for the background
-async function createStars(direction) {
-    const bg = document.getElementById('skyBackground');
-
-    // Remove existing
-    const stars = document.getElementsByClassName('bg-star');
-    const starsExist = stars.length > 0;
-    if (starsExist) {
-        Array.from(stars).forEach(star => {
-            star.classList.add(`slide-out-${direction === 'right' ? 'left' : 'right'}`);
-            setTimeout(() => star.remove(), 2000);
-        });
-    }
-
-    const starCount = window.innerWidth >= 768 ? 50 : 10;
-
-    for (let i = 0; i < starCount; i++) {
-        createStar(bg, direction, starsExist);
-    }
-}
-async function createStar(bg, direction, slideIn = false) {
-    // Set up random elements
-    let xPos = random(0, 100);
-    let yPos = random(0, 100);
-    let alpha = random(0.5, 1);
-    let size = random(1, 2);
-    let blurry = Math.random() > 0.5;
-    let colour = '#ffffff';
-    // Add them to the body
-    const star = document.createElement('div');
-    star.style.position = 'absolute';
-    star.style.left = xPos + '%';
-    star.style.top = yPos + '%';
-    star.style.opacity = alpha;
-    star.style.width = size + 'px';
-    star.style.height = size + 'px';
-    star.style.backgroundColor = colour;
-    star.style.borderRadius = '1px';
-    star.classList.add('bg-star');
-    if (slideIn) {
-        const _direction = direction === 'right' ? 'right' : 'left';
-        star.classList.add('slide-in-' + _direction);
-        // Await 2 seconds for star to slide in, and remove the class
-        setTimeout(() => star.classList.remove('slide-in-' + _direction), 2000);
-    }
-    // Blur half of them
-    if (blurry) {
-        star.style.filter = 'blur(1px)';
-    } else {
-        // Shining
-        let animated = Math.random() > 0.3;
-        if (animated) {
-            // Set randomly timed shining animation
-            setTimeout(() => {
-                star.classList.add('star-animated-1');
-            }, random(1, 3000));
-        }
-    }
-    bg.appendChild(star);
-}
-
-function random(min, max) {
-    return min + Math.random() * (max + 1 - min);
+    parent.innerHTML += el;
 }
 
 function switchPage(target) {
@@ -166,10 +91,6 @@ function switchPage(target) {
 
     // Get direction of sliding in
     const direction = routeKeys.indexOf(getPage()) <= routeKeys.indexOf(page) ? 'right' : 'left';
-    // Animate the page switch
-    if (window.innerWidth >= 768) {
-        createStars(direction);
-    }
     // Get page or default 'home'
     const targetPage = page ? page : 'home';
 
