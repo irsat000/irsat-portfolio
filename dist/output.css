@@ -631,8 +631,15 @@ main>section.active {
   padding-bottom: 0.25rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  #skillsPage .skill-set li {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 #skillsPage .skill-set .level {

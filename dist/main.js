@@ -69,7 +69,7 @@ function addSkill(name, level, parent) {
     // Level can be undefined
     let levelWrapper = '';
     if (level) {
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 6; i++) {
             levelWrapper += `<li ${level > i ? 'class="active"' : ''}></li>`;
         }
     }

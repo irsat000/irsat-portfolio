@@ -22,11 +22,10 @@
         },
         {
             "name": "Next JS",
-            "level": 3
+            "level": 2
         },
         {
-            "name": "Tailwind CSS",
-            "level": 3
+            "name": "Tailwind CSS"
         }
     ],
     "backEndSkills": [
@@ -39,41 +38,20 @@
             "level": 4
         },
         {
-            "name": "RESTful API",
-            "level": 4
-        },
-        {
             "name": "MySQL / MSSQL",
             "level": 4
         },
         {
-            "name": "C#",
-            "level": 4
+            "name": "RESTful API"
         },
         {
-            "name": ".NET",
-            "level": 4
+            "name": "C#"
         },
         {
-            "name": "Entity Framework",
-            "level": 4
-        }
-    ],
-    "otherSkills": [
-        {
-            "name": "Photoshop"
+            "name": ".NET"
         },
         {
-            "name": "Turkish",
-            "level": 5
-        },
-        {
-            "name": "English (Read, Write, Listen)",
-            "level": 4
-        },
-        {
-            "name": "English (Speech)",
-            "level": 3
+            "name": "Entity Framework"
         }
     ],
     "pastSkills": [
@@ -100,6 +78,24 @@
         },
         {
             "name": ".NET Minimal Api"
+        }
+    ],
+    "otherSkills": [
+        {
+            "name": "Problem solving",
+            "level": 5
+        },
+        {
+            "name": "Research",
+            "level": 6
+        },
+        {
+            "name": "English (Read, Write, Listen)",
+            "level": 5
+        },
+        {
+            "name": "English (Speech)",
+            "level": 3
         }
     ]
 }
