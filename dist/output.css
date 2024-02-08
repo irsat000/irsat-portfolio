@@ -720,7 +720,7 @@ main>section {
 }
 
 .project-description .tech-used {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -738,7 +738,13 @@ main>section {
   line-height: 1rem;
 }
 
-.project-description>a {
+.project-description>.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-description>.links>a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -755,13 +761,13 @@ main>section {
   line-height: 1.75rem;
 }
 
-.project-description>a:hover {
+.project-description>.links>a:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(3 105 161 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 1024px) {
-  .project-description>a {
+  .project-description>.links>a {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
