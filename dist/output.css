@@ -572,7 +572,7 @@ video {
 main>section {
   margin-bottom: 5rem;
   margin-top: 1.5rem;
-  display: none;
+  display: flex;
   width: 100%;
   flex-shrink: 0;
   flex-grow: 0;
@@ -584,27 +584,23 @@ main>section {
   }
 }
 
-main>section.active {
-  display: flex;
-}
-
-#skillsPage .skill-container {
+#skillsSection .skill-container {
   padding: 1rem;
 }
 
 @media (min-width: 768px) {
-  #skillsPage .skill-container {
+  #skillsSection .skill-container {
     min-width: 20rem;
   }
 }
 
-#skillsPage .skill-container-large {
+#skillsSection .skill-container-large {
   width: 100%;
   max-width: 640px;
   padding: 1rem;
 }
 
-#skillsPage h2 {
+#skillsSection h2 {
   margin-bottom: 1rem;
   width: 100%;
   border-bottom-width: 1px;
@@ -616,7 +612,7 @@ main>section.active {
   line-height: 2rem;
 }
 
-#skillsPage .skill-set li {
+#skillsSection .skill-set li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -629,25 +625,25 @@ main>section.active {
 }
 
 @media (min-width: 768px) {
-  #skillsPage .skill-set li {
+  #skillsSection .skill-set li {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
-#skillsPage .skill-set li span>span {
+#skillsSection .skill-set li span>span {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
 @media (min-width: 768px) {
-  #skillsPage .skill-set li span>span {
+  #skillsSection .skill-set li span>span {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-#skillsPage .skill-set li img {
+#skillsSection .skill-set li img {
   height: 1.25rem;
   max-width: 1.5rem;
   border-radius: 0.375rem;
@@ -656,12 +652,12 @@ main>section.active {
 }
 
 @media (min-width: 768px) {
-  #skillsPage .skill-set li img {
+  #skillsSection .skill-set li img {
     height: 1.5rem;
   }
 }
 
-#skillsPage .skill-container-large .skill-set {
+#skillsSection .skill-container-large .skill-set {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -849,10 +845,6 @@ main>section.active {
   margin-right: 5rem;
 }
 
-.mr-4 {
-  margin-right: 1rem;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -880,11 +872,6 @@ main>section.active {
 .size-10 {
   width: 2.5rem;
   height: 2.5rem;
-}
-
-.size-4 {
-  width: 1rem;
-  height: 1rem;
 }
 
 .size-5 {
@@ -928,10 +915,6 @@ main>section.active {
 
 .flex-col {
   flex-direction: column;
-}
-
-.items-start {
-  align-items: flex-start;
 }
 
 .items-center {
@@ -1081,28 +1064,8 @@ main>section.active {
   padding-bottom: 1rem;
 }
 
-.pl-4 {
-  padding-left: 1rem;
-}
-
-.pr-3 {
-  padding-right: 0.75rem;
-}
-
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
-}
-
-.pt-8 {
-  padding-top: 2rem;
 }
 
 .text-center {
@@ -1186,15 +1149,6 @@ main>section.active {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.blur {
-  --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .backdrop-blur-sm {
   --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -1250,14 +1204,6 @@ main>section.active {
 
   .md\:mb-7 {
     margin-bottom: 1.75rem;
-  }
-
-  .md\:mt-4 {
-    margin-top: 1rem;
-  }
-
-  .md\:mt-8 {
-    margin-top: 2rem;
   }
 
   .md\:block {

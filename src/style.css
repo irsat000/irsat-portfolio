@@ -12,41 +12,37 @@
     }
 
     main>section {
-        @apply hidden flex-shrink-0 flex-grow-0 w-full mb-20 mt-6 md:mt-20;
-    }
-
-    main>section.active {
-        @apply flex;
+        @apply flex flex-shrink-0 flex-grow-0 w-full mb-20 mt-6 md:mt-20;
     }
 
     
 
-    #skillsPage .skill-container {
+    #skillsSection .skill-container {
         @apply p-4 md:min-w-80;
     }
 
-    #skillsPage .skill-container-large {
+    #skillsSection .skill-container-large {
         @apply p-4 w-full max-w-screen-sm;
     }
 
-    #skillsPage h2 {
+    #skillsSection h2 {
         @apply text-2xl mb-4 w-full pb-2 pl-1 border-b border-white border-opacity-40;
     }
 
-    #skillsPage .skill-set li {
+    #skillsSection .skill-set li {
         @apply flex py-1 px-3 text-base md:text-xl justify-between items-center;
     }
 
-    #skillsPage .skill-set li span>span {
+    #skillsSection .skill-set li span>span {
         @apply text-sm md:text-base;
     }
 
-    #skillsPage .skill-set li img {
+    #skillsSection .skill-set li img {
         @apply h-5 max-w-6 object-contain rounded-md md:h-6;
     }
 
 
-    #skillsPage .skill-container-large .skill-set {
+    #skillsSection .skill-container-large .skill-set {
         @apply flex flex-row flex-wrap gap-x-3 gap-y-4 justify-center;
     }
 

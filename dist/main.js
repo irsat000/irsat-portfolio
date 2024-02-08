@@ -7,8 +7,16 @@ const routesMap = {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize the page based on the query string
-    switchPage('initial');
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
     // Toggle the drawer
     document.getElementById('toggleDrawerBtn').addEventListener('click', () => {
         const drawer = document.getElementById('drawerContainer');
@@ -74,86 +82,4 @@ function addSkill(s, i, parent) {
     parent.innerHTML += el;
 }
 
-function switchPage(target) {
-    let page = '';
-    // If initial get page from query string
-    if (target === 'initial') {
-        page = getPage();
-    }
-    // If not initial but the page is the same, then return
-    else if (target === getPage()) {
-        return;
-    } else {
-        page = target;
-    }
-
-    const routeKeys = Object.keys(routesMap);
-
-    // Get direction of sliding in
-    const direction = routeKeys.indexOf(getPage()) <= routeKeys.indexOf(page) ? 'right' : 'left';
-    // Get page or default 'home'
-    const targetPage = page ? page : 'home';
-
-    // Get next page and listen click event
-    const nextPageButton = document.getElementById('nextPage');
-    const nextIndex = (routeKeys.indexOf(targetPage) + 1) % routeKeys.length;
-    nextPageButton.innerText = Object.values(routesMap)[nextIndex];
-
-    // Update the query string
-    const newUrl = `${window.location.pathname}${targetPage !== 'home' ? `?page=${targetPage}` : ''}`;
-    history.pushState({}, '', newUrl);
-
-    // Hide all pages
-    const pages = document.querySelectorAll('main > section');
-    pages.forEach(targetPage => {
-        if (targetPage.classList.contains('active')) {
-            const slideOutClass = `post-slide-out-${direction === 'right' ? 'left' : 'right'}`;
-            targetPage.classList.add(slideOutClass);
-            setTimeout(() => {
-                targetPage.classList.remove('active');
-                targetPage.classList.remove(slideOutClass);
-            }, 1000);
-        }
-    });
-
-    // Show the selected page
-    const selectedPage = document.getElementById(targetPage + 'Page');
-    selectedPage.classList.add('active');
-
-    // Check if initial
-    if (target !== 'initial') {
-        // Slide in the selected page
-        const slideInClass = `post-slide-in-${direction === 'right' ? 'right' : 'left'}`;
-        selectedPage.classList.add(slideInClass);
-        setTimeout(() => {
-            selectedPage.classList.remove(slideInClass);
-        }, 1000);
-    }
-}
-
-// Go to the next page from the route keys, if it's the end, return to index 0
-let isCooldownActive = false;
-function nextPage() {
-    if (isCooldownActive) {
-        // Do nothing if the cooldown is still active
-        return;
-    }
-    // Set the cooldown flag to true
-    isCooldownActive = true;
-    // Get the next index and the key, then run switchPage
-    const routeKeys = Object.keys(routesMap);
-    const nextIndex = (routeKeys.indexOf(getPage()) + 1) % routeKeys.length;
-    switchPage(routeKeys[nextIndex]);
-    // Reset cooldown after 2 seconds
-    setTimeout(() => {
-        isCooldownActive = false;
-    }, 1000);
-}
-
 function delay(ms) { return new Promise(res => setTimeout(res, ms)) };
-
-function getPage() {
-    const queryString = window.location.search;
-    const page = new URLSearchParams(queryString).get('page');
-    return page ? page : 'home';
-}

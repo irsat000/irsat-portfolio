@@ -18,10 +18,10 @@
 	<div class="z-40 bg-black bg-opacity-20 backdrop-blur-sm hidden fixed inset-0" id="drawerContainer">
 		<div class="bg-gray-600 absolute left-0 top-0 bottom-0 py-4" id="drawer">
 			<ul class="" id="drawerList">
-				<li><a class="drawer-link" onclick="switchPage('home')">Home</a></li>
-				<li><a class="drawer-link" onclick="switchPage('skills')">Skills</a></li>
-				<li><a class="drawer-link" onclick="switchPage('projects')">Projects</a></li>
-				<li><a class="drawer-link" onclick="switchPage('contact')">Contact</a></li>
+				<li><a class="drawer-link" href="#homeSection">Home</a></li>
+				<li><a class="drawer-link" href="#skillsSection">Skills</a></li>
+				<li><a class="drawer-link" href="#projectsSection">Projects</a></li>
+				<li><a class="drawer-link" href="#contactSection">Contact</a></li>
 			</ul>
 		</div>
 	</div>
@@ -33,28 +33,18 @@
 						d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
 				</svg>
 			</button>
-			<h2 class="mr-4 mt-3 py-1 pl-4 pr-3 rounded-full border border-solid border-white text-base flex gap-2 items-center md:hidden"
-				onclick="nextPage()">
-				<span id="nextPage">Home</span>
-				<div class="size-4"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-						class="bi bi-chevron-right" viewBox="0 0 16 16">
-						<path fill-rule="evenodd"
-							d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-					</svg>
-				</div>
-			</h2>
 			<nav class="hidden md:flex flex-row items-center mt-6 mr-20 gap-6 text-gray-300" id="navigation">
 				<a href="İrşat_Akdeniz_Türkçe.pdf" target="_blank"
 					class="block py-1 px-3 rounded-3xl text-base text-white bg-sky-800 transition-colors hover:bg-sky-700">Download
 					CV</a>
-				<a class="nav-link" onclick="switchPage('home')">Home</a>
-				<a class="nav-link" onclick="switchPage('skills')">Skills</a>
-				<a class="nav-link" onclick="switchPage('projects')">Projects</a>
-				<a class="nav-link" onclick="switchPage('contact')">Contact</a>
+				<a class="nav-link" href="#homeSection">Home</a>
+				<a class="nav-link" href="#skillsSection">Skills</a>
+				<a class="nav-link" href="#projectsSection">Projects</a>
+				<a class="nav-link" href="#contactSection">Contact</a>
 			</nav>
 		</header>
-		<main class="overflow-x-hidden flex items-start w-full">
-			<section id="homePage" class="flex-col lg:flex-row justify-around gap-y-10 gap-x-5 items-center md:pt-8">
+		<main class="overflow-x-hidden flex flex-col">
+			<section id="homeSection" class="flex-col lg:flex-row justify-around gap-y-10 gap-x-5 items-center md:pt-8">
 				<div class="flex flex-col items-center text-center px-4 lg:text-left lg:items-start lg:w-1/2">
 					<h1 class="text-4xl md:text-5xl font-bold mb-2 md:mb-4"><span
 							class="text-purple-400 text-3xl">I'm</span>
@@ -67,8 +57,8 @@
 					<p class="text-xl opacity-75 mb-4 md:mb-7 indent-1">
 						Hi, I spent a lot of time to get where I am right now. And I loved every second of it! I work
 						with HTML, SCSS, TS, TailwindCSS, React, Node.js, SQL and <a
-							class="text-blue-300 cursor-pointer hover:underline"
-							onclick="switchPage('skills')">more</a>. I am based in Türkiye. I have
+							class="text-blue-300 cursor-pointer hover:underline" href="#skillsSection">more</a>. I am
+						based in Türkiye. I have
 						B2 level English and I never stop learning.
 					</p>
 					<div class="flex gap-4">
@@ -84,7 +74,7 @@
 										d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
 								</svg>
 							</span></a>
-						<a onclick="switchPage('contact')"
+						<a href="#contactSection"
 							class="flex items-center gap-2 py-3 px-4 rounded-full cursor-pointer text-base border-solid border border-white transition-colors duration-75 hover:bg-sky-700">Hire
 							me
 							<span class="size-5">
@@ -103,7 +93,7 @@
 					</div>
 				</div>
 			</section>
-			<section id="skillsPage" class="flex-col px-[4%]">
+			<section id="skillsSection" class="flex-col px-[4%]">
 				<div class="flex flex-col gap-y-6">
 					<div class="flex flex-col gap-y-6 justify-center sm:flex-row sm:gap-x-[4%]">
 						<div class="skill-container">
@@ -123,7 +113,7 @@
 					</div>
 				</div>
 			</section>
-			<section id="projectsPage" class="flex-col gap-y-10 gap-x-5 px-[5%] lg:px-[10%]">
+			<section id="projectsSection" class="flex-col gap-y-10 gap-x-5 px-[5%] lg:px-[10%]">
 				<!--<h2 class="text-4xl opacity-70"></h2>-->
 				<div class="w-full flex flex-col gap-20">
 					<div class="project-wrapper">
@@ -209,7 +199,7 @@
 					</div>
 				</div>
 			</section>
-			<section id="contactPage" class="">
+			<section id="contactSection" class="">
 				<h3 class="text-2xl text-center w-full">Hire me</h3>
 			</section>
 		</main>
