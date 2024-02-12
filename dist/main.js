@@ -66,7 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
     })();
 
     // Fetch skills
-    fetch("/dist/mySkills.json")
+    let skillsUrl = "/mySkills.json";
+    if (window.location.hostname.includes('127.0.0.1')
+        || window.location.hostname.includes('localhost')) {
+        skillsUrl = "/dist/mySkills.json";
+    }
+    fetch(skillsUrl)
         .then(res => res.json())
         .then(data => {
             const frontEndSkills = document.getElementById("frontEndSkills");
