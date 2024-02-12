@@ -1,7 +1,7 @@
 {
   "name": "irsatportfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portfolio project of Muhammet İrşat Akdeniz",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
