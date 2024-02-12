@@ -903,6 +903,11 @@ main>section {
   height: 100%;
 }
 
+.size-4 {
+  width: 1rem;
+  height: 1rem;
+}
+
 .h-1\/6 {
   height: 16.666667%;
 }
@@ -1137,6 +1142,16 @@ main>section {
   line-height: 1.75rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1169,6 +1184,21 @@ main>section {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 .opacity-70 {
@@ -1274,6 +1304,10 @@ main>section {
     margin-top: 6rem;
   }
 
+  .md\:mb-40 {
+    margin-bottom: 10rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -1284,6 +1318,11 @@ main>section {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:size-8 {
+    width: 2rem;
+    height: 2rem;
   }
 
   .md\:h-\[400px\] {
@@ -1301,6 +1340,14 @@ main>section {
 
   .md\:justify-end {
     justify-content: flex-end;
+  }
+
+  .md\:gap-12 {
+    gap: 3rem;
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
   }
 
   .md\:bg-opacity-30 {
@@ -1329,6 +1376,11 @@ main>section {
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .md\:backdrop-blur-sm {
