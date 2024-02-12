@@ -94,7 +94,7 @@
     }
 
     .project-description>.links>a {
-        @apply text-lg lg:text-xl flex items-center gap-2 py-1 px-4 rounded-full border border-solid border-white hover:bg-sky-700;
+        @apply text-lg lg:text-xl flex items-center gap-2 pt-[6px] pb-[4px] px-4 rounded-full border border-solid border-white hover:bg-sky-700;
     }
 
     .project-wrapper .img-wrap {

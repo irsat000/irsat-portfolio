@@ -771,10 +771,10 @@ main>section {
   border-style: solid;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-top: 6px;
+  padding-bottom: 4px;
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
@@ -921,13 +921,13 @@ main>section {
   flex-shrink: 0;
 }
 
-.-translate-y-\[2px\] {
-  --tw-translate-y: -2px;
+.-translate-x-full {
+  --tw-translate-x: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.-translate-x-full {
-  --tw-translate-x: -100%;
+.-translate-y-\[2px\] {
+  --tw-translate-y: -2px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1070,14 +1070,21 @@ main>section {
   padding-right: 5%;
 }
 
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.pb-\[2px\] {
+  padding-bottom: 2px;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.pt-\[4px\] {
+  padding-top: 4px;
 }
 
 .text-center {
@@ -1086,6 +1093,14 @@ main>section {
 
 .indent-1 {
   text-indent: 0.25rem;
+}
+
+.font-laila {
+  font-family: "Laila", serif;
+}
+
+.font-merriweather {
+  font-family: "Merriweather", serif;
 }
 
 .text-2xl {
@@ -1172,24 +1187,24 @@ main>section {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
-.transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-.duration-75 {
-  transition-duration: 75ms;
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .duration-150 {
   transition-duration: 150ms;
+}
+
+.duration-75 {
+  transition-duration: 75ms;
 }
 
 .hover\:bg-sky-700:hover {
