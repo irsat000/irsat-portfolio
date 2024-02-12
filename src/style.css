@@ -7,6 +7,22 @@
         @apply text-xl hover:text-white transition-colors cursor-pointer;
     }
 
+    #drawer.active {
+        @apply -translate-x-0;
+    }
+
+    #drawerList {
+        @apply flex flex-col gap-3 py-4;
+    }
+
+    #drawerList li {
+        @apply flex flex-row items-center gap-2 pl-4;
+    }
+
+    #drawerList li span {
+        @apply size-6;
+    }
+
     .drawer-link {
         @apply block text-2xl py-2 pl-4 pr-7 whitespace-nowrap;
     }

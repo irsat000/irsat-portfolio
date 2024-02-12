@@ -17,16 +17,25 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-    // Toggle the drawer
+    // Activate the drawer
     document.getElementById('toggleDrawerBtn').addEventListener('click', () => {
         const drawer = document.getElementById('drawerContainer');
-        drawer.classList.toggle('hidden');
+        drawer.classList.remove('hidden');
+        setTimeout(() => {
+            const menu = drawer.querySelector('#drawer');
+            menu.classList.add('active');
+        }, 50);
     });
     // Click outside the drawer
     document.getElementById('drawerContainer').addEventListener('click', (e) => {
-        if (!e.currentTarget.closest('.drawer')) {
+        if (!e.target.closest('#drawer') || e.target.closest('#drawerList > li')) {
             const drawer = document.getElementById('drawerContainer');
-            drawer.classList.toggle('hidden');
+            const menu = drawer.querySelector('#drawer');
+            menu.classList.remove('active');
+
+            setTimeout(() => {
+                drawer.classList.add('hidden');
+            }, 150);
         }
     });
     // Switch between job titles
