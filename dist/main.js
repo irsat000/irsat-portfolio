@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Adds skill to the given skill-set
 function addSkill(s, i, parent) {
-    let icon = s.icon ? `<img src="../src/skill_icons/${s.icon}" />` : '';
+    let icon = s.icon ? `<img src="assets/skill_icons/${s.icon}" />` : '';
     let el = `
         <li>
             <span>${i !== -1 ? `<span>${++i}.</span> ` : ''}${s.name}</span>
