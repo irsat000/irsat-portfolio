@@ -727,7 +727,8 @@ main>section {
 .project-description p {
   font-size: 1rem;
   line-height: 1.5rem;
-  opacity: 0.7;
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1280px) {
@@ -735,6 +736,15 @@ main>section {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+}
+
+.project-description p a {
+  --tw-text-opacity: 1;
+  color: rgb(56 189 248 / var(--tw-text-opacity));
+}
+
+.project-description p a:hover {
+  text-decoration-line: underline;
 }
 
 .project-description .tech-used {

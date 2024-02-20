@@ -78,7 +78,11 @@
     }
 
     .project-description p {
-        @apply text-base opacity-70 xl:text-lg;
+        @apply text-base text-gray-300 xl:text-lg;
+    }
+
+    .project-description p a {
+        @apply text-sky-400 hover:underline;
     }
 
     .project-description .tech-used {
