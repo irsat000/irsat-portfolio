@@ -10,6 +10,22 @@ html {
   scrollbar-width: thin;
 }
 
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: rgb(255, 255, 255);
+  }
+}
+#blinkingCursor {
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
 @keyframes move {
   100% {
     transform: translate3d(0, 0, 1px) rotate(360deg);
